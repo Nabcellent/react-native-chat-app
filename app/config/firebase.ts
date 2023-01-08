@@ -12,6 +12,6 @@ const firebaseConfig = {
     appId: Constants.manifest?.extra?.appId
 };
 
-initializeApp(firebaseConfig);
-export const auth = getAuth()
-export const db = getFirestore()
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app)
+export const db = getFirestore(app)
